@@ -4,22 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <script src="https://unpkg.com/vue@3.0.2"></script>
 </head>
-<h1>含稅金額</h1>
-<input>
-<button id="myButton">按我說早安</button>
-<script>
-    var button = document.getElementById('myButton');
-    button.addEventListener('click', function () {
-        alert('早安');
-    });
-</script>
+<h1>Vue</h1>
 
-<div>未稅金額:</div>
-<div>稅額:</div>
-<div>輸入次數:</div>
+<div id="app">
+    <p> {{title}} {{author}} {{age}}</p>
+</div>
 
+<script src="app.js"></script>
 
 </body>
 
