@@ -8,6 +8,11 @@ const app =Vue.createApp({
             age: '45'
 
         }
+    },
+    methods:{
+        changeTitle(){
+            console.log('幹破你娘')
+        }
     }
 })
 app.mount('#app')

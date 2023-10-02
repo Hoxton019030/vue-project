@@ -10,6 +10,12 @@
 
 <div id="app">
     <p> {{title}} {{author}} {{age}}</p>
+    <button v-on:click="age++">Increase Age</button>
+    <button v-on:click="age--">Decrease Age</button>
+    <!-- @click跟v-on是一樣的意思，因為v-on太常出現，就用@來代替了 -->
+    <div @click="changeTitle">Change Book</div>
+    
+    
 </div>
 
 <script src="app.js"></script>
