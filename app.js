@@ -10,8 +10,8 @@ const app =Vue.createApp({
         }
     },
     methods:{
-        changeTitle(){
-            console.log('幹破你娘')
+        changeTitle(title){
+            this.title = title
         }
     }
 })
