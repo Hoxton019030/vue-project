@@ -1,5 +1,7 @@
 console.log('Hello vue')
 
+
+
 const app =Vue.createApp({
     data(){
         return{
@@ -12,6 +14,9 @@ const app =Vue.createApp({
     methods:{
         changeTitle(title){
             this.title = title
+        },
+        handleEvent(e){
+            console.log(e)
         }
     }
 })

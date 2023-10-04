@@ -5,15 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
+    <style>
+        .box{
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background-color: #ddd;
+            margin: 20px;
+            display: inline-block;
+
+        }
+    </style>
 </head>
 <h1>Vue</h1>
 
 <div id="app">
+    <a href="index2.html">點我到第二頁-如何for-each一個list</a>
     <p> {{title}} {{author}} {{age}}</p>
     <button v-on:click="age++">Increase Age</button>
     <button v-on:click="age--">Decrease Age</button>
     <!-- @click跟v-on是一樣的意思，因為v-on太常出現，就用@來代替了 -->
     <div @click="changeTitle('最後帝國')">Change Book</div>
+
+    <br>
+
+    <div class="box" @mouseover="handleEvent($event)">滑鼠進入會console.log</div>
+    <div class="box" @mouseleave="handleEvent()">滑鼠離開會console.log</div>
+    <div class="box" @dblclick="handleEvent()">滑鼠點擊兩次會console.log</div>
+    <div class="box" @mousemove="handleMousemove"></div>
     
     
 </div>
