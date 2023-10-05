@@ -17,8 +17,9 @@
 <div id="app">
     <a :href="blog">我的部落格</a>
     <br>
-    <a href="index.html">點我到第ㄧ頁</a>
-    <div v-on:click="consolo.log('123')"> 123</div>
+    <a href="index1.html">點我到第ㄧ頁</a>
+    <a href="index2.html">點我到第二頁</a>
+    <div>我的最愛書單:{{ filteredBooks}}</div>
     <div v-if="showBooks">
         <ul>
             <li @click="changeFav(book)" v-for="book in books" v-bind:class="{ fav:book.isFav}">

@@ -6,9 +6,9 @@ const app = Vue.createApp({
             blog: 'https://hoxtonhsu.com/',
             showBooks: true,
             books: [
-                { title: ' name of the wind', author: 'patrick rothfuss', isFav: true },
-                { title: ' the way of kings', author: 'brandon sanderson', isFav: false },
-                { title: ' the final empire', author: 'brandon sanderson', isFav: true },
+                { title: 'name of the wind', author: 'patrick rothfuss', isFav: true },
+                { title: 'the way of kings', author: 'brandon sanderson', isFav: false },
+                { title: 'the final empire', author: 'brandon sanderson', isFav: true },
             ]
 
         }
@@ -26,6 +26,12 @@ const app = Vue.createApp({
         },
         print(message) {
             console.log(message)
+        }
+    },
+    computed:{
+        filteredBooks(){
+            return this.books.filter((book)=> book.isFav).map((book)=> book.title);
+            
         }
     }
 })
