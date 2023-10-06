@@ -1,8 +1,12 @@
 <template>
   <h1>{{ title }}</h1>
-    <Modal/>
+  <div v-if="showModal">
+    <Modal :someProp="someProp" theme="dark-mode" @closecloseclose="toggleModal" />
+  </div>
   <input type="text" ref="boo" />
   <button @click="handleClick">點我啊</button>
+  <br>
+  <button @click="toggleModal">Open Modal</button>
 </template>
 
 <script>
@@ -14,6 +18,8 @@ export default {
   data() {
     return {
       title: "My First Vue App",
+      someProp: "Sign up for the Giveaway",
+      showModal: false,
     };
   },
   methods: {
@@ -22,6 +28,9 @@ export default {
       this.$refs.boo.classList.add("active");
       this.$refs.boo.focus();
     },
+    toggleModal(){
+      this.showModal =!this.showModal
+    }
   },
 };
 </script>
