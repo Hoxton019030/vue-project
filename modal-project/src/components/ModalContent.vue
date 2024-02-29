@@ -1,7 +1,11 @@
 <template>
-    <div class="backdrop" @click="closeModal">
+<!-- clck.self 只有點到backdrop的區域時才會觸發 -->
+    <div class="backdrop" @click.self="closeModal"> 
         <div class="modal" :class="{ dark :theme ==='dark-mode'}">
+            
             <p> {{someProp}}</p>
+            <slot></slot>
+            <slot name="linkslinks"></slot>
         </div>
     </div>
 </template>

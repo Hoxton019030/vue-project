@@ -1,11 +1,22 @@
 <template>
   <h1>{{ title }}</h1>
   <div v-if="showModal">
-    <Modal :someProp="someProp" theme="dark-mode" @closecloseclose="toggleModal" />
+    <Modal
+      :someProp="someProp"
+      theme="dark-mode"
+      @closecloseclose="toggleModal"
+    >
+      <p>我是Slot</p>
+      <template v-slot:linkslinks>
+        <a href="">登入</a>
+        <br>
+        <a href="">更多資訊</a>
+      </template>
+    </Modal>
   </div>
   <input type="text" ref="boo" />
   <button @click="handleClick">點我啊</button>
-  <br>
+  <br />
   <button @click="toggleModal">Open Modal</button>
 </template>
 
@@ -28,9 +39,9 @@ export default {
       this.$refs.boo.classList.add("active");
       this.$refs.boo.focus();
     },
-    toggleModal(){
-      this.showModal =!this.showModal
-    }
+    toggleModal() {
+      this.showModal = !this.showModal;
+    },
   },
 };
 </script>
